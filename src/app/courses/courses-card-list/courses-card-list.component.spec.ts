@@ -60,7 +60,7 @@ describe('CoursesCardListComponent', () => {
 
     const course = component.courses[0];
     const card = el.query(By.css(".course-card:first-child")),
-      title = card.query(By.css("mat-mdc-card-title")),
+      title = card.query(By.css("mat-card-title")),
       image = card.query(By.css("img"))
 
     expect(card).toBeTruthy("Could not find course card");

@@ -104,11 +104,14 @@ describe('HomeComponent', () => {
     click(tabs[1]);
     fixture.detectChanges();
 
-    const cardTitles = el.queryAll(By.css('.mat-card-title'));
+    setTimeout(() => {
+      const cardTitles = el.queryAll(By.css('.mat-card-title'));
 
-    expect(cardTitles.length).toBeGreaterThan(0, "Could not find card titles");
-
-    expect(cardTitles[0].nativeElement.textContent).toContain("Angular Security Course");
+      expect(cardTitles.length).toBeGreaterThan(0, "Could not find card titles");
+  
+      expect(cardTitles[0].nativeElement.textContent).toContain("Angular Security Course");
+      
+    }, 500);
 
   });
 
